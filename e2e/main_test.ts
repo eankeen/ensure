@@ -10,7 +10,7 @@ if (Deno.build.os === "windows") {
   Deno.test({
   name: "exit code of 0 when running shouldPass",
   fn: async (): Promise<void> => {
-    const scriptName = path.join(_dirname, "shouldPass.ts").slice(1);
+    const scriptName = path.join(_dirname, "shouldPass.ts");
     const proc = Deno.run({
       stdout: "piped",
       stderr: "inherit",
